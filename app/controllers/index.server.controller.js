@@ -6,6 +6,7 @@ exports.render=function(req,res){
   req.session.lastVisit = new Date();
 
 	res.render('index', {
-		title: 'This is how the first template got rendered!!'
+		title: 'This is how the first template got rendered!!',
+		userFullName: req.user ? req.user.fullName : ''
 	});
 };
